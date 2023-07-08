@@ -51,7 +51,15 @@ export default async function Home() {
         { <Image className='animate__animated animate__fadeInUp' src={imageUrl} width={500} height={300} alt="random image" />} 
         <h1 className='text-center'>Share</h1>
         <div className="flex justify-center items-center">
-          <a href={`https://twitter.com/intent/tweet?text=${imageUrl}`} target="_blank" rel="noopener noreferrer" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+        {/* according to the vercel og backend I just created */}
+        <a
+            href={`https://twitter.com/intent/tweet?text=Random Image Generator&url=https://regal-syrniki-fd670c.netlify.app/&hashtags=RandomImageGenerator`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            
+         
             Tweet
           </a>
 
