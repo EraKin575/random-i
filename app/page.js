@@ -35,7 +35,7 @@ export default async function Home() {
         <h1 className='text-center'>Share</h1>
         <div className="flex gap-3 justify-center items-center">
           <a 
-          href={`https://twitter.com/intent/tweet?text=Random Image Generator&url=${imageUrl}`}
+          href={`https://twitter.com/intent/tweet?text=Random Image Generator&url=${`https://regal-syrniki-fd670c.netlify.app/`}`}
           target="_blank"
           rel="noopener noreferrer"
           
@@ -45,7 +45,7 @@ export default async function Home() {
           </a>
 
           <a
-          href={`https://www.facebook.com/sharer/sharer.php?u=${imageUrl}`}
+          href={`https://www.facebook.com/sharer/sharer.php?u=${`https://regal-syrniki-fd670c.netlify.app/`}`}
           target="_blank"
           rel="noopener noreferrer"
           
@@ -54,7 +54,7 @@ export default async function Home() {
           </a>
 
           <a
-          href={`https://www.whatsapp.com/send?text=Random Image Generator ${imageUrl}`}
+          href={`https://www.whatsapp.com/send?text=Random Image Generator ${`https://regal-syrniki-fd670c.netlify.app/`}`}
           target="_blank"
           >
             <Image src='/whatsapp.png' width={40} height={40} alt="whatsapp" />
