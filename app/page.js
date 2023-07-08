@@ -55,7 +55,7 @@ export default async function Home() {
         <div className="flex justify-center items-center">
         {/* share image generated according to the vercel og backend I just created */}
         <a
-            href={`https://twitter.com/intent/tweet?text=Random Image Generator&url=${imgUrl}`}
+            href={`https://twitter.com/intent/tweet?text=Random Image Generator&url=${imageUrl}`}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
