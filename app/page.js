@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Head from 'next/head';
 
 
 const imageFetcher = async () => {
@@ -17,6 +18,13 @@ export default async function Home() {
 
   return (
     <div className="bg-gradient-to-r from-gray-700 h-screen via-gray-900 to-black flex justify-center items-center">
+      <Head>
+        <title>Random Image Generator</title>
+        <meta name="description" content="Random Image Generator" />
+        <meta name="image" content={imageUrl} />
+
+        
+      </Head>
       <div>
         <h1
           className="text-4xl text-white font-bold text-center mb-10"
