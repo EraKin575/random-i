@@ -27,6 +27,8 @@ export default async function Home() {
       <Head>
        <title>Random Image Generator</title>
        <meta property='og:image' content={imgUrl} />
+       <meta property='twitter:card' content='summary_large_image' />
+       <meta property='twitter:image' content={imgUrl} />
         {/* <meta name="description" content="Random Image Generator" />
         <link rel="icon" href="/favicon.ico" />
         <meta property='og:title' content='Random Image Generator' />
@@ -34,9 +36,9 @@ export default async function Home() {
         <meta property='og:image' content={imageUrl} />
 
         <meta property='twitter:title' content='Random Image Generator' />
-         <meta property='twitter:card' content='summary_large_image' />
+       
          <meta property='twitter:description' content='Random Image Generator' />
-         <meta property='twitter:image' content={imageUrl} />
+        
          <meta name="twitter:url" content="https://regal-syrniki-fd670c.netlify.app/" /> */}
 
 
@@ -51,15 +53,13 @@ export default async function Home() {
         { <Image className='animate__animated animate__fadeInUp' src={imageUrl} width={500} height={300} alt="random image" />} 
         <h1 className='text-center'>Share</h1>
         <div className="flex justify-center items-center">
-        {/* according to the vercel og backend I just created */}
+        {/* share image generated according to the vercel og backend I just created */}
         <a
-            href={`https://twitter.com/intent/tweet?text=Random Image Generator&url=https://regal-syrniki-fd670c.netlify.app/&hashtags=RandomImageGenerator`}
+            href={`https://twitter.com/intent/tweet?text=Random Image Generator&url=${imgUrl}`}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           >
-            
-         
             Tweet
           </a>
 
