@@ -2,8 +2,13 @@ import Image from 'next/image';
 import Head from 'next/head';
 import animate from 'animate.css';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+
+// dynamically import the share buttons
+;
 
 const imageFetcher = async () => {
+ 
   const response = await fetch('https://random.imagecdn.app/v1/image?width=500&height=300&category=buildings&format=json', {
     cache: "no-cache"
   });
@@ -28,10 +33,34 @@ export default async function Home() {
         <h1 className="text-4xl text-white font-bold text-center mb-10">Random Image Generator</h1>
         <Image className='animate__animated animate__fadeInUp' src={imageUrl} width={500} height={300} alt="random image" />
         <h1 className='text-center'>Share</h1>
-        <div className="flex justify-center items-center">
-          <Link href={`https://twitter.com/intent/tweet?url=${imageUrl}`}>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Twitter</button>
-          </Link>
+        <div className="flex gap-3 justify-center items-center">
+          <a 
+          href={`https://twitter.com/intent/tweet?text=Random Image Generator&url=${imageUrl}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          
+          >
+            <Image src='/twitter.png' width={40} height={40} alt="twitter" />
+
+          </a>
+
+          <a
+          href={`https://www.facebook.com/sharer/sharer.php?u=${imageUrl}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          
+          >
+            <Image src='/facebook.png' width={40} height={40} alt="facebook" />
+          </a>
+
+          <a
+          href={`https://www.whatsapp.com/send?text=Random Image Generator ${imageUrl}`}
+          target="_blank"
+          >
+            <Image src='/whatsapp.png' width={40} height={40} alt="whatsapp" />
+          </a>
+
+        
         </div>
       </div>
     </div>
