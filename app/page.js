@@ -28,10 +28,11 @@ export default async function Home() {
         <meta property='og:image' content={imageUrl} />
 
         <meta property='twitter:title' content='Random Image Generator' />
-        <meta property='twitter:card' content='summary_large_image' />
-        <meta property='twitter:description' content='Random Image Generator' />
-        <meta property='twitter:image' content={imageUrl} />
-        <meta name="twitter:url" content="https://regal-syrniki-fd670c.netlify.app/" />
+         <meta property='twitter:card' content='summary_large_image' />
+         <meta property='twitter:description' content='Random Image Generator' />
+         <meta property='twitter:image' content={imageUrl} />
+         <meta name="twitter:url" content="https://regal-syrniki-fd670c.netlify.app/" />
+
 
         
       </Head>
